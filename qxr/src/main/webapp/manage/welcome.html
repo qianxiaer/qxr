@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>welcome</title>
+<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../layui/layui.js"></script>
+</head>
+<body>
+	本机IP:<span id="ip"></span> 本机id:<span id="id"></span> 地址:<span id="address"></span>
+</body>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+    console.log(returnCitySN["cip"]+','+returnCitySN["cname"]) 
+    $("#ip").text(returnCitySN["cip"]);
+    $("#address").text(returnCitySN["cname"]);
+    $("#id").text(returnCitySN["cid"]);
+</script>
+</html>

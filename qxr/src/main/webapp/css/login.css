@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.layui-fluid{
+	padding: 0px 0px;
+}
+.top{
+	background-image: url(../img/title.jpg);
+	height: 150px;
+}
+.content{
+	background-image: url(../img/content.jpeg);
+	height: 780px;
+}
+.title{
+	margin-top: 20px;
+	text-indent: 150px;
+}
+.sub{
+	margin-left: 110px;
+}
+.layui-form{
+	background-color: #F0F0F0;
+	height: 400px;
+}

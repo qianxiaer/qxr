@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qxr.manage.dao.MenuDao">
+	<resultMap type="Menu" id="menuMap">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="mgr" column="mgr"/>
+		<result property="url" column="url"/>
+		<result property="createtime" column="createtime"/>
+		<result property="username" column="username"/>
+		<result property="status" column="status"/>
+		<result property="mgrname" column="mgrname"/>
+	</resultMap>
+	<select id="findAll" resultMap="menuMap">
+		select
+			id,
+			name,
+			mgr,
+			url,
+			createtime,
+			username,
+			status,
+			IFNULL( ( select name from menu c where c.id = f.mgr ), '一级菜单' ) mgrname 
+		from
+			menu f
+		where status = 1
+			LIMIT #{begin},
+			#{limit}
+	</select>
+	<update id="update" parameterType="com.qxr.manage.entity.Menu">
+		update menu set 
+			name = #{name},
+			mgr = #{mgr},
+			url = #{mgr},
+			createtime = NOW(),
+			username = #{username},
+			status = #{status}
+		where id = #{id}
+	</update>
+	<insert id="insert" parameterType="com.qxr.manage.entity.Menu">
+		insert into menu(name,mgr,url,createtime,username,status) 
+			values(#{name},#{mgr},#{mgr},NOW(),#{username},1)
+	</insert>
+</mapper>

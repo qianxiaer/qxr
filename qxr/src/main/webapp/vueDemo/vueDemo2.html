@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue Demo</title>
+<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+  <div id="form"> 	
+	<input type="text" v-model="username"><br/>
+	<input type="text" v-model="password">
+  </div>
+</body>
+<script type="text/javascript">
+	var data = {
+		username:"",
+		password:""
+	}
+	var form = new Vue({
+		el : '#form',
+		data : data
+	})
+</script>
+</html>

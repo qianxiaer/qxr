@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后台首页</title>
+<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+	<div class="layui-fluid">
+		<div class="layui-row top">
+			
+		</div>
+		<div class="layui-row">
+			<div class="left layui-col-md1">
+				<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="menu">
+					<li class="layui-nav-item"><a _href="">系统管理</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a id="1" _href="menu/index.html">菜单管理</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="main layui-col-md11">
+				<div class="layui-tab" lay-filter="main" lay-allowclose="true">
+					<ul class="layui-tab-title">
+						<li class="first-tab layui-this">控制面板</li>
+					</ul>
+					<div class="layui-tab-content">
+						<div class="layui-tab-item layui-show">
+							<iframe class="a-iframe" src="welcome.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/index.js"></script>
+</html>
